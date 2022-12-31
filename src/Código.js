@@ -11,7 +11,7 @@ var DATE_FIN = "2022/12/15" //YYYY/MM/DD
 
 //----------------------------------------------======----Step 1 - Collectiong Threads
 //var FirstThread = GmailApp.getInboxThreads(0,15); //use this line if you want search all emails without queries.
-QUERY_STRING = "label:inbox -is:starred after: 2021/1/1 before:2022/12/15";
+QUERY_STRING = "label:inbox -is:starred after:" + DATE_INI + " before:" + DATE_FIN;
 var FirstThread = GmailApp.search(QUERY_STRING , 0 , 400);
 
 //-------------------------------------------------------Step 2 -  Printing Threads number
