@@ -1,8 +1,8 @@
 function ChangeLabel() {
-/* ---------------------------------------------------------------------------
+/* --------------------------------------------------------------------------------------------
 This function allow to change Threads Labels queried by a range of date.
 The user must previously create the label in your gmail and choose the star and finish date.
--------------------------------------------------*/
+--------------------------------------------------------------------------------------------*/
 
 // -------------------------------------------------------Step 0 - Setup the parameters of change
 var MyLabel = "_Operação/Antigos/@ntigos - 2022" //define your Label Name
