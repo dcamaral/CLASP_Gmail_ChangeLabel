@@ -3,8 +3,13 @@ function ChangeLabel() {
 This function allow to change Threads Labels queried by a range of date.
 The user must previously create the label in your gmail and choose the star and finish date.
 -------------------------------------------------*/
-//----------------------------------------------======----Step 1 - Collectiong Threads
 
+// -------------------------------------------------------Step 0 - Setup the parameters of change
+var MyLabel = "_Operação/Antigos/@ntigos - 2022" //define your Label Name
+var DATE_INI = "2021/1/1" //YYYY/MM/DD
+var DATE_FIN = "2022/12/15" //YYYY/MM/DD
+
+//----------------------------------------------======----Step 1 - Collectiong Threads
 //var FirstThread = GmailApp.getInboxThreads(0,15); //use this line if you want search all emails without queries.
 QUERY_STRING = "label:inbox -is:starred after: 2021/1/1 before:2022/12/15";
 var FirstThread = GmailApp.search(QUERY_STRING , 0 , 400);
@@ -28,7 +33,7 @@ var messages = GmailApp.getMessagesForThreads(FirstThread);
   console.log("número de itens no res = " + res.length);
 
 //---------------------------------------------------------Step 5 - Creating Label objects
-  var MyLabel = "_Operação/Antigos/@ntigos - 2022"
+
   var label = GmailApp.getUserLabelByName(MyLabel);
   console.log ("O rótulo é: " + label.getName());
 
